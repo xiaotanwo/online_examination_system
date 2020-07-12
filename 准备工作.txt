@@ -1,0 +1,25 @@
+准备工作：
+
+创建数据库，先插入一条用户信息以便登录
+
+用户表：
+drop table if exists users;
+create table users (
+    userId      int primary key auto_increment,
+    userName    varchar(50),
+    password    varchar(50),
+    sex         char(1),
+    email       varchar(50)
+);
+
+试题表：
+drop table if exists questions;
+create table questions (
+    questionId  int primary key auto_increment,
+    question    varchar(100),
+    optionA     varchar(50),
+    optionB     varchar(50),
+    optionC     varchar(50),
+    optionD     varchar(50),
+    answer      char(1)
+);

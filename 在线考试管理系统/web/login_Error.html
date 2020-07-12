@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>登录页面</title>
+    </head>
+    <body>
+    <div align="center">
+        <p style="color: blue; font-size: 30px">在线考试管理系统——登录页面</p>
+        <form action="/myWeb/login" method="post">
+            <table border="2px">
+                <tr>
+                    <td>用户姓名：</td>
+                    <td><input type="text" name="userName"></td>
+                </tr>
+                <tr>
+                    <td>用户密码：</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr align="center">
+                    <td><input type="submit" value="登录"></td>
+                    <td><input type="reset" value="清空"></td>
+                </tr>
+            </table>
+        </form>
+        <p style="color: red; font-size: 30px">登录失败，请重新登录！</p>
+    </div>
+    </body>
+</html>
