@@ -14,7 +14,7 @@
     <body>
         <div align="center">
             <table border="2px">
-                <tr>
+                <tr align="center">
                     <td>用户ID</td>
                     <td>用户姓名</td>
                     <td>用户密码</td>
@@ -23,8 +23,8 @@
                     <td>操作</td>
                 </tr>
                 <%
-                    List<Users> list = (List)request.getAttribute("user_Find");
-                    for (Users user : list) {
+                    List<Users> userList = (List)request.getAttribute("user_Find");
+                    for (Users user : userList) {
                 %>
                         <tr>
                             <td><%=user.getUserId()%></td>

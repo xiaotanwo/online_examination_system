@@ -27,6 +27,46 @@
         <servlet-name>UserDeleteServlet</servlet-name>
         <servlet-class>com.foxanfgrapes.controller.UserDeleteServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>QuestionAddServlet</servlet-name>
+        <servlet-class>com.foxanfgrapes.controller.QuestionAddServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuestionFindServlet</servlet-name>
+        <servlet-class>com.foxanfgrapes.controller.QuestionFindServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuestionDeleteServlet</servlet-name>
+        <servlet-class>com.foxanfgrapes.controller.QuestionDeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuestionUpdateServlet</servlet-name>
+        <servlet-class>com.foxanfgrapes.controller.QuestionUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuestionFindByIdServlet</servlet-name>
+        <servlet-class>com.foxanfgrapes.controller.QuestionFindByIdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuestionFindByIdServlet</servlet-name>
+        <url-pattern>/question/findById</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionUpdateServlet</servlet-name>
+        <url-pattern>/question/update</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionDeleteServlet</servlet-name>
+        <url-pattern>/question/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionFindServlet</servlet-name>
+        <url-pattern>/question/find</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionAddServlet</servlet-name>
+        <url-pattern>/question/add</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>UserDeleteServlet</servlet-name>
         <url-pattern>/user/delete</url-pattern>
