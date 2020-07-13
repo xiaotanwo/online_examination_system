@@ -13,7 +13,6 @@
     <body>
         <%
             Questions question = (Questions)request.getAttribute("curQuestion");
-            System.out.println(question.getQuestion());
         %>
         <div align="center">
             <form action="/myWeb/question/update" method="get">
@@ -45,14 +44,10 @@
                     <tr>
                         <td>答案</td>
                         <td>
-                            <input type="radio" name="answer<%=question.getQuestionId()%>" value="A"
-                                <%="A".equals(question.getAnswer()) ? "checked" : ""%>>A
-                            <input type="radio" name="answer<%=question.getQuestionId()%>" value="B"
-                                <%="B".equals(question.getAnswer()) ? "checked" : ""%>>B
-                            <input type="radio" name="answer<%=question.getQuestionId()%>" value="C"
-                                <%="C".equals(question.getAnswer()) ? "checked" : ""%>>C
-                            <input type="radio" name="answer<%=question.getQuestionId()%>" value="D"
-                                <%="D".equals(question.getAnswer()) ? "checked" : ""%>>D
+                            <input type="radio" name="answer" value="A" <%="A".equals(question.getAnswer()) ? "checked" : ""%>>A
+                            <input type="radio" name="answer" value="B" <%="B".equals(question.getAnswer()) ? "checked" : ""%>>B
+                            <input type="radio" name="answer" value="C" <%="C".equals(question.getAnswer()) ? "checked" : ""%>>C
+                            <input type="radio" name="answer" value="D" <%="D".equals(question.getAnswer()) ? "checked" : ""%>>D
                         </td>
                     </tr>
                     <tr align="center">

@@ -19,7 +19,7 @@ public class QuestionUpdateServlet extends HttpServlet {
         optionB = request.getParameter("optionB");
         optionC = request.getParameter("optionC");
         optionD = request.getParameter("optionD");
-        answer = request.getParameter("answer" + questionId);
+        answer = request.getParameter("answer");
         Questions questions = new Questions(questionId, question, optionA, optionB, optionC, optionD, answer);
         QuestionDao questionDao = new QuestionDao();
         int restult = questionDao.update(questions, request);
