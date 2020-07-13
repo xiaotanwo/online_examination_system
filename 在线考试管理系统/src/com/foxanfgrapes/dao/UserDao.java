@@ -88,6 +88,6 @@ public class UserDao {
         } finally {
             jdbcUtil.close(rs, request);
         }
-        return  result;
+        return result;
     }
 }

@@ -18,6 +18,7 @@ public class ServerListener implements ServletContextListener {
         Map map = new HashMap();
         JdbcUtil jdbcUtil = new JdbcUtil();
         // 创建conn池
+        System.out.println("创建30个conn的池");
         for (int i=0; i<30; i++) {
             Connection conn = jdbcUtil.getConn();
             map.put(conn, true);
