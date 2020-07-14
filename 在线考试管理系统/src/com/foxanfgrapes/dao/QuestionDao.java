@@ -121,4 +121,32 @@ public class QuestionDao {
         }
         return result;
     }
+
+    public List findRand(HttpServletRequest request) {
+        String sql = "select * from questions order by rand() limit 5";
+        List list = new ArrayList();
+        PreparedStatement ps = jdbcUtil.getPs(sql, request);
+        String question, optionA, optionB, optionC, optionD, answer;
+        Integer questionId;
+        ResultSet rs = null;
+        try {
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                questionId = rs.getInt("questionId");
+                question = rs.getString("question");
+                optionA = rs.getString("optionA");
+                optionB = rs.getString("optionB");
+                optionC = rs.getString("optionC");
+                optionD = rs.getString("optionD");
+                answer = rs.getString("answer");
+                Questions questions = new Questions(questionId, question, optionA, optionB, optionC, optionD, answer);
+                list.add(questions);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            jdbcUtil.close(rs, request);
+        }
+        return list;
+    }
 }
